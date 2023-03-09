@@ -5,14 +5,14 @@ public class Search {
     public static int exponentialSearch(int[] arr, int target) {
         int n = arr.length;
         if (n == 0) {
-            return -1; // array is empty
+            return -1; //boundry Scenario
         }
         if (arr[0] == target) {
             return 0;
         }
         int i = 1;
         while (i < n && arr[i] <= target) {
-            i *= 2;
+            i = i * 2;
         }
         int l = i / 2;
         int r = i - 1;
