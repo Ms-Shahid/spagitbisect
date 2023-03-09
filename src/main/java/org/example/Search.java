@@ -20,7 +20,7 @@ public class Search {
             r = n - 1;
         }
         while (l <= r) {
-            int temp = (r - l)/2;
+            int temp = (r - l) / 2;
             int m = l + temp;
             if (arr[m] == target) {
                 return m;
@@ -29,8 +29,7 @@ public class Search {
                 if (l > r) {
                     return -1; // target not found
                 }
-            }
-            else {
+            } else {
                 r = m - 1;
                 if (l > r) {
                     return -1; // target not found
