@@ -11,9 +11,8 @@ public class Search {
             return 0;
         }
         int i = 1;
-        while (i < n ){
-            if (arr[i] <= target) {
-            i = i*2;
+        while (i < n && arr[i] <= target) {
+            i *= 2;
         }
         int l = i / 2;
         int r = i - 1;
@@ -24,13 +23,13 @@ public class Search {
             int temp = (r - l)/2;
             int m = l + temp;
             if (arr[m] == target) {
-              return m;
+                return m;
             } else if (arr[m] < target) {
                 l = m + 1;
                 if (l > r) {
                     return -1; // target not found
                 }
-      }
+            }
             else {
                 r = m - 1;
                 if (l > r) {
@@ -42,4 +41,4 @@ public class Search {
     }
 
 
-    }
+}
