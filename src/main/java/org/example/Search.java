@@ -29,10 +29,6 @@ public class Search {
             startIndex *= 2;
         }
 
-        // Set the left and right bounds for binary search
-        int left = startIndex / 2;
-        int right = Math.min(startIndex, n - 1);
-
         // Perform binary search
         int result = Arrays.binarySearch(arr, startIndex / 2, Math.min(startIndex, arr.length), target);
 
