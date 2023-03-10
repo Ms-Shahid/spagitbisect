@@ -28,9 +28,7 @@ public class Search {
             } else {
                 right = mid - 1; // search left half
             }
-            }
+        }
         return -1; // target not found
     }
-
-
 }
