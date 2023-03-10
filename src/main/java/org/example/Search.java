@@ -35,7 +35,7 @@ public class Search {
         }
 
         // Perform binary search to find the result
-        int result = Arrays.binarySearch(arr, startIndex / 2, Math.min(startIndex, arr.length), target);
+        int result = binarySearch(arr, startIndex / 2, Math.min(startIndex, arr.length), target);
 
         // Adjust result to return -1 if value not found
         return result < 0 ? -1 : result;
