@@ -7,7 +7,7 @@ public class Search {
 
         // Handle boundary scenarios
         if (n == 0) {
-            // Empty array
+            // Empty array (so return -1 in case of empty array)
             return -1;
         } else if (arr[0] == target) {
             // Target is at index 0
