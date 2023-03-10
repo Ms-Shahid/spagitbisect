@@ -21,16 +21,16 @@ public class Search {
         }
         while (l <= r) {
             int temp = (r - l) / 2;
-            int m = l + temp;
-            if (arr[m] == target) {
-                return m;
-            } else if (arr[m] < target) {
-                l = m + 1;
+            int mid = l + temp;
+            if (arr[mid] == target) {
+                return mid;
+            } else if (arr[mid] < target) {
+                l = mid + 1;
                 if (l > r) {
                     return -1; // target not found
                 }
             } else {
-                r = m - 1;
+                r = mid - 1;
                 if (l > r) {
                     return -1; // target not found
                 }
