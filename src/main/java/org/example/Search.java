@@ -5,10 +5,10 @@ public class Search {
     public static int exponentialSearch(int[] arr, int target) {
         int n = arr.length;
         if (n == 0) {
-            return -1; //boundary Scenario
+            return -1; //Boundary Scenario if the array length is zero(Empty Array)
         }
         if (arr[0] == target) {
-            return 0;
+            return 0;// Boundary Scenario if the target is at index 0
         }
         int i = 1;
         while (i < n && arr[i] <= target) {
@@ -20,8 +20,7 @@ public class Search {
             right = n - 1;
         }
         while (left <= right) {
-            int temp = (right - left) / 2;
-            int mid = left + temp;
+            int mid = left + (right - left) / 2;
             if (arr[mid] == target) {
                 return mid;
             } else if (arr[mid] < target) {
