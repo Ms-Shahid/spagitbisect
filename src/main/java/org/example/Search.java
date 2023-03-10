@@ -15,23 +15,23 @@ public class Search {
             i = i * 2;
         }
         int left = i / 2;
-        int r = i - 1;
-        if (r >= n) {
-            r = n - 1;
+        int right = i - 1;
+        if (right >= n) {
+            right = n - 1;
         }
-        while (left <= r) {
-            int temp = (r - left) / 2;
+        while (left <= right) {
+            int temp = (right - left) / 2;
             int mid = left + temp;
             if (arr[mid] == target) {
                 return mid;
             } else if (arr[mid] < target) {
                 left = mid + 1;
-                if (left > r) {
+                if (left > right) {
                     return -1; // target not found
                 }
             } else {
-                r = mid - 1;
-                if (left > r) {
+                right = mid - 1;
+                if (left > right) {
                     return -1; // target not found
                 }
             }
