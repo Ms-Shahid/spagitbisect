@@ -5,14 +5,14 @@ public class Search {
     public static int exponentialSearch(int[] arr, int target) {
         int n = arr.length;
         if (n == 0) {
-            return -1; //boundry Scenario
+            return -1; //boundary Scenario
         }
         if (arr[0] == target) {
             return 0;
         }
         int i = 1;
         while (i < n && arr[i] <= target) {
-            i = i * 2;
+            i *= 2;
         }
         int left = i / 2;
         int right = i - 1;
@@ -27,12 +27,12 @@ public class Search {
             } else if (arr[mid] < target) {
                 left = mid + 1;
                 if (left > right) {
-                    return -1; // Boundry exceeded
+                    return -1; // Boundary exceeded
                 }
             } else {
                 right = mid - 1;
                 if (left > right) {
-                    return -1; // Boundry exceeded
+                    return -1; // Boundary exceeded
                 }
             }
         }
