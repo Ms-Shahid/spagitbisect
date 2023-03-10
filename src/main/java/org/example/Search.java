@@ -4,28 +4,40 @@ public class Search {
 
     public static int exponentialSearch(int[] arr, int target) {
         int n = arr.length;
+
+        // Handle boundary scenarios
         if (n == 0) {
-            return -1; //Boundary Scenario if the array length is zero(Empty Array)
+            // Empty array
+            return -1;
+        } else if (arr[0] == target) {
+            // Target is at index 0
+            return 0;
         }
-        if (arr[0] == target) {
-            return 0;// Boundary Scenario if the target is at index 0
+
+        // Find the start index for binary search
+        int startIndex = 1;
+        while (startIndex < n && arr[startIndex] <= target) {
+            startIndex *= 2;
         }
-        int i = 1;
-        while (i < n && arr[i] <= target) {
-            i *= 2;
-        }
-        int left = i / 2;
-        int right = Math.min(i, arr.length - 1);//Added Math.min function for improvement
-        while (left <= right) {
+
+        // Set the left and right bounds for binary search
+        int left = startIndex / 2;
+        int right = Math.min(startIndex, n - 1);
+
+        // Perform binary search
+        do {
             int mid = left + (right - left) / 2;
             if (arr[mid] == target) {
-                return mid; // element found, return index
+                // Element found, return index
+                return mid;
             } else if (arr[mid] < target) {
-                left = mid + 1; // search right half
+                left = mid + 1;
             } else {
-                right = mid - 1; // search left half
+                right = mid - 1;
             }
-        }
-        return -1; // target not found
+        } while (left <= right);
+
+        // Target not found
+        return -1;
     }
 }
