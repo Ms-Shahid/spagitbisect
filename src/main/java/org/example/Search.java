@@ -15,10 +15,7 @@ public class Search {
             i *= 2;
         }
         int left = i / 2;
-        int right = i - 1;
-        if (right >= n) {
-            right = n - 1;
-        }
+        int right = Math.min(i, arr.length - 1);
         while (left <= right) {
             int mid = left + (right - left) / 2;
             if (arr[mid] == target) {
