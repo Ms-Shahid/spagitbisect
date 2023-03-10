@@ -15,7 +15,7 @@ public class Search {
             i *= 2;
         }
         int left = i / 2;
-        int right = Math.min(i, arr.length - 1);
+        int right = Math.min(i, arr.length - 1);//Added Math.min function for improvement
         while (left <= right) {
             int mid = left + (right - left) / 2;
             if (arr[mid] == target) {
