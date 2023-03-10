@@ -27,12 +27,12 @@ public class Search {
             } else if (arr[mid] < target) {
                 left = mid + 1;
                 if (left > right) {
-                    return -1; // target not found
+                    return -1; // Boundry exceeded
                 }
             } else {
                 right = mid - 1;
                 if (left > right) {
-                    return -1; // target not found
+                    return -1; // Boundry exceeded
                 }
             }
         }
