@@ -4,6 +4,10 @@ import java.util.Arrays;
 
 public class Search {
 
+    private static int binarySearch(int[] arr, int startIndex, int endIndex, int target) {
+        int result = Arrays.binarySearch(arr, startIndex, endIndex, target);
+        return result < 0 ? -1 : result;
+    }
     /**
      * Performs a binary search on a sorted array with an exponential bound.
      *
