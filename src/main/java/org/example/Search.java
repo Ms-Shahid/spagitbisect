@@ -22,19 +22,13 @@ public class Search {
         while (left <= right) {
             int mid = left + (right - left) / 2;
             if (arr[mid] == target) {
-                return mid;
+                return mid; // element found, return index
             } else if (arr[mid] < target) {
-                left = mid + 1;
-                if (left > right) {
-                    return -1; // Boundary exceeded
-                }
+                left = mid + 1; // search right half
             } else {
-                right = mid - 1;
-                if (left > right) {
-                    return -1; // Boundary exceeded
-                }
+                right = mid - 1; // search left half
             }
-        }
+            }
         return -1; // target not found
     }
 
