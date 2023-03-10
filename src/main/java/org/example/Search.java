@@ -1,6 +1,15 @@
 package org.example;
 
+import java.util.Arrays;
+
 public class Search {
+
+    /**
+     * Performs a binary search on a sorted array with an exponential bound.
+     * @param arr the sorted array to search
+     * @param target the value to search for in the array
+     * @return the index of the value if found, or -1 if not found
+     */
 
     public static int exponentialSearch(int[] arr, int target) {
         int n = arr.length;
@@ -25,19 +34,9 @@ public class Search {
         int right = Math.min(startIndex, n - 1);
 
         // Perform binary search
-        do {
-            int mid = left + (right - left) / 2;
-            if (arr[mid] == target) {
-                // Element found, return index
-                return mid;
-            } else if (arr[mid] < target) {
-                left = mid + 1;
-            } else {
-                right = mid - 1;
-            }
-        } while (left <= right);
+        int result = Arrays.binarySearch(arr, startIndex / 2, Math.min(startIndex, arr.length), target);
 
-        // Target not found
-        return -1;
+        // Adjust result to return -1 if value not found
+        return result < 0 ? -1 : result;
     }
 }
