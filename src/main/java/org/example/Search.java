@@ -6,7 +6,8 @@ public class Search {
 
     /**
      * Performs a binary search on a sorted array with an exponential bound.
-     * @param arr the sorted array to search
+     *
+     * @param arr    the sorted array to search
      * @param target the value to search for in the array
      * @return the index of the value if found, or -1 if not found
      */
@@ -29,7 +30,7 @@ public class Search {
             startIndex *= 2;
         }
 
-        // Perform binary search
+        // Perform binary search to find the result
         int result = Arrays.binarySearch(arr, startIndex / 2, Math.min(startIndex, arr.length), target);
 
         // Adjust result to return -1 if value not found
