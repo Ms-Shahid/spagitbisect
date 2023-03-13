@@ -4,9 +4,17 @@ import java.util.Arrays;
 
 public class Search {
 
+    /**
+     * Performs a binary search on a sorted array within the specified range.
+     * @param arr the sorted array to search
+     * @param startIndex the starting index of the search range, inclusive
+     * @param endIndex the ending index of the search range, exclusive
+     * @param target the value to search for in the array
+     * @return the index of the value if found, or -1 if not found
+     */
     private static int binarySearch(int[] arr, int startIndex, int endIndex, int target) {
         int result = Arrays.binarySearch(arr, startIndex, endIndex, target);
-        return result < 0 ? -1 : result;
+        return result < 0 ? 1 : result;
     }
     /**
      * Performs a binary search on a sorted array with an exponential bound.
