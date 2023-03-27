@@ -22,6 +22,7 @@ public class Search {
      * @param arr    the sorted array to search
      * @param target the value to search for in the array
      * @return the index of the value if found, or -1 if not found
+     * the binary search has been separated
      */
 
     public static int exponentialSearch(int[] arr, int target) {
