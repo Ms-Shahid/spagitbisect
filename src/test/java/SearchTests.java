@@ -3,6 +3,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+
 public class SearchTests {
 
 
@@ -43,6 +44,7 @@ public class SearchTests {
         assertEquals(expectedIndex, actualIndex);
     }
 
+    //The last element test
     @Test
     public void testExponentialSearchLastElement() {
         int[] arr = {1, 3, 5, 7, 9, 11};
@@ -52,6 +54,7 @@ public class SearchTests {
         assertEquals(expectedIndex, actualIndex);
     }
 
+    //The Empty array test
     @Test
     public void testExponentialSearchEmptyArray() {
         int[] arr = {};
@@ -61,6 +64,7 @@ public class SearchTests {
         assertEquals(expectedIndex, actualIndex);
     }
 
+    //The duplicate element test
     @Test
     public void testExponentialSearchDuplicateElements() {
         int[] arr = {1, 3, 5, 5, 7, 9, 11};
@@ -70,6 +74,7 @@ public class SearchTests {
         assertTrue(actualIndex == expectedIndex || actualIndex == 3);
     }
 
+    //The negative element test
     @Test
     public void testExponentialSearchNegativeElements() {
         int[] arr = {-11, -9, -7, -5, -3, -1};
@@ -78,6 +83,7 @@ public class SearchTests {
         int actualIndex = Search.exponentialSearch(arr, target);
         assertEquals(expectedIndex, actualIndex);
     }
+
 
     @Test
     public void testExponentialSearchZeroElement() {
@@ -88,6 +94,7 @@ public class SearchTests {
         assertEquals(expectedIndex, actualIndex);
     }
 
+    //The search large array
     @Test
     public void testExponentialSearchLargeArray() {
         int[] arr = new int[1000000];
