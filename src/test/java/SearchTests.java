@@ -7,6 +7,7 @@ import static org.junit.Assert.assertTrue;
 public class SearchTests {
 
 
+    //Generic test
     @Test
     public void testExponentialSearch() {
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
@@ -17,6 +18,7 @@ public class SearchTests {
     }
 
 
+    //The exponential search found
     @Test
     public void testExponentialSearchFound() {
         int[] arr = {1, 3, 5, 7, 9, 11};
@@ -26,6 +28,7 @@ public class SearchTests {
         assertEquals(expectedIndex, actualIndex);
     }
 
+    //The search not found test
     @Test
     public void testExponentialSearchNotFound() {
         int[] arr = {1, 3, 5, 7, 9, 11};
@@ -35,6 +38,7 @@ public class SearchTests {
         assertEquals(expectedIndex, actualIndex);
     }
 
+    //The first element test
     @Test
     public void testExponentialSearchFirstElement() {
         int[] arr = {1, 3, 5, 7, 9, 11};
@@ -85,6 +89,7 @@ public class SearchTests {
     }
 
 
+    //The zero element search
     @Test
     public void testExponentialSearchZeroElement() {
         int[] arr = {1, 3, 0, 7, 9, 11};
